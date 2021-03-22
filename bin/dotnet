@@ -1,0 +1,7 @@
+#!/bin/zsh
+
+docker run -it --rm --workdir "/$(basename $(pwd))" \
+    --mount type=bind,src=$(pwd),dst=/$(basename $(pwd)) \
+    -v $(pwd)/.omnisharp:/root/.omnisharp \
+    -v $(pwd)/.vscode-server:/root/.vscode-server \
+    mcr.microsoft.com/dotnet/sdk:3.1.407-buster /bin/bash

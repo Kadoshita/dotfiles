@@ -1,0 +1,11 @@
+[alias]
+    st = status
+    df = diff
+    ad = add
+    co = commit
+    br = branch
+    ch = checkout
+    logone = log --oneline
+    graph=log --graph --date=short --decorate=short --pretty=format:'%Cgreen%h %Creset%cd %Cgreen%cn %Cred%d %Creset%s'
+[help]
+    autocorrect = 1
