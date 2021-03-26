@@ -22,6 +22,7 @@ brew install --cask obs
 brew install --cask clipy
 brew install --cask notion
 brew install --cask zoom
+brew install --cask ngrok
 
 # develop
 brew install --cask docker
