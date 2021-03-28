@@ -1,0 +1,6 @@
+#!/bin/zsh
+
+docker run -it --rm -v $HOME/.zshrc:/root/.zshrc \
+    -v $HOME/.p10k.zsh:/root/.p10k.zsh \
+    -v $HOME/powerlevel10k/:/root/powerlevel10k/ \
+    workspace:latest /usr/bin/zsh
