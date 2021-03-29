@@ -44,6 +44,7 @@ brew install --cask lens
 # communication
 brew install --cask slack
 brew install --cask discord
+brew install --cask microsoft-teams
 
 # cli
 brew install htop
@@ -51,3 +52,4 @@ brew install neofetch
 brew install wget
 brew install nano
 brew install zsh-autosuggestions
+brew install iproute2mac
