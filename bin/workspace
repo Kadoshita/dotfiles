@@ -1,6 +1,10 @@
 #!/bin/zsh
 
-docker run -it --rm -v $HOME/.zshrc:/root/.zshrc \
+docker run -e TERM -e COLORTERM -it --rm \
+    --workdir "/$(basename $(pwd))" \
+    --mount type=bind,src=$(pwd),dst=/$(basename $(pwd)) \
+    -v $HOME/.zshrc:/root/.zshrc \
     -v $HOME/.p10k.zsh:/root/.p10k.zsh \
     -v $HOME/powerlevel10k/:/root/powerlevel10k/ \
+    -v $HOME/.gitconfig:/root/.gitconfig \
     workspace:latest /usr/bin/zsh
