@@ -11,7 +11,7 @@ brew install --cask google-backup-and-sync
 brew install --cask google-earth-pro
 brew install --cask intel-power-gadget
 brew install --cask vlc
-brew install --cask plex-media-player
+brew install --cask plex
 brew install --cask adobe-acrobat-reader
 brew install --cask deepl
 brew install --cask stats
@@ -53,3 +53,4 @@ brew install wget
 brew install nano
 brew install zsh-autosuggestions
 brew install iproute2mac
+brew install jq

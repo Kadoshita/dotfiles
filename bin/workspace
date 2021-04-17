@@ -7,4 +7,6 @@ docker run -e TERM -e COLORTERM -it --rm \
     -v $HOME/.p10k.zsh:/root/.p10k.zsh \
     -v $HOME/powerlevel10k/:/root/powerlevel10k/ \
     -v $HOME/.gitconfig:/root/.gitconfig \
+    -p 3000:3000 \
+    -p 8080:8080 \
     workspace:latest /usr/bin/zsh
