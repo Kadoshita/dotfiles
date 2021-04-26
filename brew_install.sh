@@ -23,6 +23,7 @@ brew install --cask clipy
 brew install --cask notion
 brew install --cask zoom
 brew install --cask ngrok
+brew install --cask nextcloud
 
 # develop
 brew install --cask docker
