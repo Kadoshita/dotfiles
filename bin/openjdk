@@ -1,0 +1,15 @@
+#!/bin/zsh
+
+if [ -n "$PORT" ]; then
+    docker run -it --rm --workdir /usr/local/src \
+        --mount type=bind,src=$(pwd),dst=/usr/local/src \
+        -v ~/vscode-remote-containers/.vscode-server:/root/.vscode-server \
+        -p $PORT:$PORT \
+        -e PORT=$PORT \
+        openjdk:16-jdk-buster /bin/bash
+else
+    docker run -it --rm --workdir /usr/local/src \
+        --mount type=bind,src=$(pwd),dst=/usr/local/src \
+        -v ~/vscode-remote-containers/.vscode-server:/root/.vscode-server \
+        openjdk:16-jdk-buster /bin/bash
+fi

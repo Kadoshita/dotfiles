@@ -1,0 +1,15 @@
+#!/bin/zsh
+
+if [ -n "$PORT" ]; then
+    docker run -it --rm --workdir /usr/local/src \
+        --mount type=bind,src=$(pwd),dst=/usr/local/src \
+        -v ~/vscode-remote-containers/.vscode-server:/root/.vscode-server \
+        -p $PORT:$PORT \
+        -e PORT=$PORT \
+        ruby:3.0.1-buster /bin/bash
+else
+    docker run -it --rm --workdir /usr/local/src \
+        --mount type=bind,src=$(pwd),dst=/usr/local/src \
+        -v ~/vscode-remote-containers/.vscode-server:/root/.vscode-server \
+        ruby:3.0.1-buster /bin/bash
+fi
