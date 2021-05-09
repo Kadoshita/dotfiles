@@ -1,6 +1,5 @@
 #!/bin/zsh
 
-source .constants
 mv .zshrc.sample .zshrc
 
 ln -s $(pwd)/.zshrc $HOME/.zshrc
