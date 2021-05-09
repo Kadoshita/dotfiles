@@ -3,6 +3,7 @@
 docker run -e TERM -e COLORTERM -it --rm \
     --workdir "/$(basename $(pwd))" \
     --mount type=bind,src=$(pwd),dst=/$(basename $(pwd)) \
+    -v ~/vscode-remote-containers/.vscode-server:/root/.vscode-server \
     -v $HOME/.zshrc:/root/.zshrc \
     -v $HOME/.p10k.zsh:/root/.p10k.zsh \
     -v $HOME/powerlevel10k/:/root/powerlevel10k/ \
