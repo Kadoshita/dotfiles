@@ -1,17 +1,17 @@
 #!/bin/zsh
 
 if [ -n "$PORT" ]; then
-    docker run -it --rm --workdir "/$(basename $(pwd))" \
-        --mount type=bind,src=$(pwd),dst=/$(basename $(pwd)) \
-        -v ~/vscode-remote-containers/$(basename $(pwd))/.omnisharp:/root/.omnisharp \
-        -v ~/vscode-remote-containers/$(basename $(pwd))/.vscode-server:/root/.vscode-server \
+    docker run -it --rm --workdir /usr/local/src \
+        --mount type=bind,src=$(pwd),dst=/usr/local/src \
+        -v ~/vscode-remote-containers/.omnisharp:/root/.omnisharp \
+        -v ~/vscode-remote-containers/.vscode-server:/root/.vscode-server \
         -p $PORT:$PORT \
         -e PORT=$PORT \
         mcr.microsoft.com/dotnet/sdk:3.1.407-buster /bin/bash
 else
-    docker run -it --rm --workdir "/$(basename $(pwd))" \
-        --mount type=bind,src=$(pwd),dst=/$(basename $(pwd)) \
-        -v ~/vscode-remote-containers/$(basename $(pwd))/.omnisharp:/root/.omnisharp \
-        -v ~/vscode-remote-containers/$(basename $(pwd))/.vscode-server:/root/.vscode-server \
+    docker run -it --rm --workdir /usr/local/src \
+        --mount type=bind,src=$(pwd),dst=/usr/local/src \
+        -v ~/vscode-remote-containers/.omnisharp:/root/.omnisharp \
+        -v ~/vscode-remote-containers/.vscode-server:/root/.vscode-server \
         mcr.microsoft.com/dotnet/sdk:3.1.407-buster /bin/bash
 fi
